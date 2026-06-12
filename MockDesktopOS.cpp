@@ -1,14 +1,14 @@
-#include <memory>
-#include "ConsoleManager.h"
+#include <Windows.h>
+#include "DesktopApp.h"
 
-int main() {
-    ConsoleManager::initialize();
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
+    DesktopApp app;
+    app.setWindowTitle("Mock Desktop OS");
+    app.setDesktopName("CSOPESY Desktop");
 
-    while (ConsoleManager::getInstance()->isRunning()) {
-        ConsoleManager::getInstance()->process();
-        ConsoleManager::getInstance()->drawConsole();
+    if (!app.run()) {
+        return 1;
     }
 
-    ConsoleManager::destroy();
     return 0;
 }
