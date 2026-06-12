@@ -139,16 +139,16 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\repos\CSOPESY-MCO\MockDesktopOS\AConsole.cpp" />
-    <ClCompile Include="..\repos\CSOPESY-MCO\MockDesktopOS\BaseScreen.cpp" />
-    <ClCompile Include="..\repos\CSOPESY-MCO\MockDesktopOS\ConsoleManager.cpp" />
-    <ClCompile Include="..\repos\CSOPESY-MCO\MockDesktopOS\MockDesktopOS.cpp" />
+    <ClInclude Include="AConsole.h" />
+    <ClInclude Include="BaseScreen.h" />
+    <ClInclude Include="ConsoleManager.h" />
+    <ClInclude Include="TypeDefs.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\repos\CSOPESY-MCO\MockDesktopOS\AConsole.h" />
-    <ClInclude Include="..\repos\CSOPESY-MCO\MockDesktopOS\BaseScreen.h" />
-    <ClInclude Include="..\repos\CSOPESY-MCO\MockDesktopOS\ConsoleManager.h" />
-    <ClInclude Include="..\repos\CSOPESY-MCO\MockDesktopOS\TypeDefs.h" />
+    <ClCompile Include="AConsole.cpp" />
+    <ClCompile Include="BaseScreen.cpp" />
+    <ClCompile Include="ConsoleManger.cpp" />
+    <ClCompile Include="MockDesktopOS.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
