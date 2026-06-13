@@ -55,6 +55,8 @@ bool DesktopApp::initialize() {
     glfwSwapInterval(1);
     glfwMaximizeWindow(windowHandle);
 
+    taskBar.setTargetWindow(windowHandle);
+
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
@@ -104,6 +106,7 @@ void DesktopApp::renderFrame() {
     ImGui::NewFrame();
 
     renderDesktop();
+    taskBar.render();
 
     ImGui::Render();
 
@@ -152,11 +155,6 @@ void DesktopApp::renderDesktop() {
 
     ImGui::Begin("DesktopRoot", nullptr, rootFlags);
 
-    ImGui::SetCursorPos(ImVec2(20.0f, 20.0f));
-    if (ImGui::Button("PWR", ImVec2(90.0f, 40.0f))) {
-        glfwSetWindowShouldClose(windowHandle, GLFW_TRUE);
-    }
-
     ImGui::SetCursorPos(ImVec2(viewportSize.x - 260.0f, 18.0f));
     if (ImGui::BeginChild("ClockPanel", ImVec2(240.0f, 80.0f), true)) {
         ImGui::TextUnformatted(desktopName.c_str());
@@ -166,7 +164,6 @@ void DesktopApp::renderDesktop() {
     ImGui::EndChild();
 
     ConsoleManager::getInstance()->drawConsole();
-    taskBar.render();
 
     ImGui::End();
 }

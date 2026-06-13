@@ -47,7 +47,10 @@
     <ClCompile Include="BaseScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConsoleManger.cpp">
+    <ClCompile Include="ConsoleManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DesktopApp.cpp">

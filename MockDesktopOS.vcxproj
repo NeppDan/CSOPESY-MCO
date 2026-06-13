@@ -155,9 +155,10 @@
   <ItemGroup>
     <ClCompile Include="AConsole.cpp" />
     <ClCompile Include="BaseScreen.cpp" />
-    <ClCompile Include="ConsoleManger.cpp" />
+    <ClCompile Include="ConsoleManager.cpp" />
     <ClCompile Include="DesktopApp.cpp" />
     <ClCompile Include="MockDesktopOS.cpp" />
+    <ClCompile Include="TaskBar.cpp" />
     <ClCompile Include="imgui\imgui-master\imgui.cpp" />
     <ClCompile Include="imgui\imgui-master\imgui_draw.cpp" />
     <ClCompile Include="imgui\imgui-master\imgui_tables.cpp" />
