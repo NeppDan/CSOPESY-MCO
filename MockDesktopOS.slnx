@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="MockDesktopOS.vcxproj" />
+  <Project Path="MockDesktopOS.vcxproj" Id="dd5ab9b8-04f4-41ff-a4ff-5ce253efad17" />
 </Solution>

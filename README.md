@@ -23,7 +23,7 @@ You do not need to install Dear ImGui separately because the source is already i
 Open PowerShell in the project folder and run:
 
 ```powershell
-C:\msys64\ucrt64\bin\g++.exe -std=c++20 -mwindows -Iimgui/imgui-master -Iimgui/imgui-master/backends MockDesktopOS.cpp DesktopApp.cpp AConsole.cpp BaseScreen.cpp ConsoleManger.cpp imgui/imgui-master/imgui.cpp imgui/imgui-master/imgui_draw.cpp imgui/imgui-master/imgui_tables.cpp imgui/imgui-master/imgui_widgets.cpp imgui/imgui-master/backends/imgui_impl_glfw.cpp imgui/imgui-master/backends/imgui_impl_opengl2.cpp -LC:/msys64/ucrt64/lib -lglfw3 -lopengl32 -lgdi32 -lgdiplus -luser32 -lkernel32 -lole32 -luuid -lshell32 -o MockDesktopOS.exe
+C:\msys64\ucrt64\bin\g++.exe -std=c++20 -mwindows -Iimgui/imgui-master -Iimgui/imgui-master/backends MockDesktopOS.cpp DesktopApp.cpp AConsole.cpp BaseScreen.cpp ConsoleManager.cpp imgui/imgui-master/imgui.cpp imgui/imgui-master/imgui_draw.cpp imgui/imgui-master/imgui_tables.cpp imgui/imgui-master/imgui_widgets.cpp imgui/imgui-master/backends/imgui_impl_glfw.cpp imgui/imgui-master/backends/imgui_impl_opengl2.cpp -LC:/msys64/ucrt64/lib -lglfw3 -lopengl32 -lgdi32 -lgdiplus -luser32 -lkernel32 -lole32 -luuid -lshell32 -o MockDesktopOS.exe
 .
 MockDesktopOS.exe
 ```
