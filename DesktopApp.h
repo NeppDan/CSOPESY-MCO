@@ -2,6 +2,7 @@
 
 #include <string>
 #include "ConsoleManager.h"
+#include "TaskBar.h"   
 
 struct GLFWwindow;
 
@@ -22,4 +23,5 @@ private:
     std::string windowTitle = "Mock Desktop OS";
     std::string desktopName = "CSOPESY Desktop";
     GLFWwindow* windowHandle = nullptr;
+    TaskBar taskBar;
 };

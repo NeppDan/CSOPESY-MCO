@@ -4,6 +4,8 @@
 
 ConsoleManager* ConsoleManager::sharedInstance = nullptr;
 
+ConsoleManager::ConsoleManager() {}
+
 ConsoleManager* ConsoleManager::getInstance() {
     if (sharedInstance == nullptr) {
         sharedInstance = new ConsoleManager();
@@ -71,8 +73,4 @@ void ConsoleManager::switchToScreen(String screenName) {
 
 void ConsoleManager::unregisterScreen(String screenName) {
     consoleTable.erase(screenName);
-}
-
-HANDLE ConsoleManager::getConsoleHandle() const {
-    return consoleHandle;
 }

@@ -166,6 +166,7 @@ void DesktopApp::renderDesktop() {
     ImGui::EndChild();
 
     ConsoleManager::getInstance()->drawConsole();
+    taskBar.render();
 
     ImGui::End();
 }

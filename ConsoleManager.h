@@ -1,7 +1,6 @@
 #pragma once
 #include <memory>
 #include <unordered_map>
-#include <Windows.h>
 #include "AConsole.h"
 #include "TypeDefs.h"
 
