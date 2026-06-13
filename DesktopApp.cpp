@@ -1,6 +1,7 @@
 #define GLFW_INCLUDE_NONE
 
 #include "DesktopApp.h"
+#include "ConsoleManager.h"
 
 #include <chrono>
 #include <ctime>
@@ -73,10 +74,14 @@ bool DesktopApp::initialize() {
         return false;
     }
 
+    ConsoleManager::initialize();
+
     return true;
 }
 
 void DesktopApp::shutdown() {
+    ConsoleManager::destroy();
+
     ImGui_ImplOpenGL2_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
@@ -91,6 +96,8 @@ void DesktopApp::shutdown() {
 
 void DesktopApp::renderFrame() {
     glfwPollEvents();
+
+    ConsoleManager::getInstance()->process();
 
     ImGui_ImplOpenGL2_NewFrame();
     ImGui_ImplGlfw_NewFrame();
@@ -157,6 +164,8 @@ void DesktopApp::renderDesktop() {
         ImGui::TextUnformatted(currentTimeText().c_str());
     }
     ImGui::EndChild();
+
+    ConsoleManager::getInstance()->drawConsole();
 
     ImGui::End();
 }

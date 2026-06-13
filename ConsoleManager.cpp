@@ -4,10 +4,6 @@
 
 ConsoleManager* ConsoleManager::sharedInstance = nullptr;
 
-ConsoleManager::ConsoleManager() {
-    this->consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
-}
-
 ConsoleManager* ConsoleManager::getInstance() {
     if (sharedInstance == nullptr) {
         sharedInstance = new ConsoleManager();

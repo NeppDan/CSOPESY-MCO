@@ -29,7 +29,6 @@ public:
     void exitApplication();
     bool isRunning() const;
 
-    HANDLE getConsoleHandle() const;
 
 private:
     ConsoleManager();
@@ -43,6 +42,5 @@ private:
     std::shared_ptr<AConsole> currentConsole;
     std::shared_ptr<AConsole> previousConsole;
 
-    HANDLE consoleHandle;
     bool running = true;
 };
