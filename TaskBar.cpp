@@ -43,11 +43,19 @@ void TaskBar::render() {
     renderTerminalWindow();
 
     if (taskManagerOpen) {
-        ImGui::SetNextWindowSize(ImVec2(360.0f, 220.0f), ImGuiCond_FirstUseEver);
+        ImGui::SetNextWindowSize(ImVec2(1000.0f, 440.0f), ImGuiCond_FirstUseEver);
         ImGui::Begin("Task Manager", &taskManagerOpen, ImGuiWindowFlags_NoCollapse);
-        ImGui::TextUnformatted("Task Manager placeholder");
-        ImGui::Separator();
-        ImGui::TextWrapped("Reserved for Component 3.");
+        if (ImGui::BeginTable("TaskManagerTable", 4, ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)) {
+            ImGui::TableSetupColumn("Name");
+            ImGui::TableSetupColumn("CPU %");
+            ImGui::TableSetupColumn("Memory");
+            ImGui::TableSetupColumn("Network");
+            ImGui::TableHeadersRow();
+            ImGui::TableNextRow(); ImGui::TableSetColumnIndex(0); ImGui::TextUnformatted("System");            ImGui::TableSetColumnIndex(1); ImGui::Text("14.8");    ImGui::TableSetColumnIndex(2); ImGui::Text("321 MB"); ImGui::TableSetColumnIndex(3); ImGui::Text("6.8 Mbps");
+            ImGui::TableNextRow(); ImGui::TableSetColumnIndex(0); ImGui::TextUnformatted("Explorer.exe");       ImGui::TableSetColumnIndex(1); ImGui::Text("2.4"); ImGui::TableSetColumnIndex(2); ImGui::Text("182 MB"); ImGui::TableSetColumnIndex(3); ImGui::Text("1.2 Mbps");
+            ImGui::TableNextRow(); ImGui::TableSetColumnIndex(0); ImGui::TextUnformatted("MockApp.exe");        ImGui::TableSetColumnIndex(1); ImGui::Text("1.0"); ImGui::TableSetColumnIndex(2); ImGui::Text("50 MB"); ImGui::TableSetColumnIndex(3); ImGui::Text("0.5 Mbps");
+            ImGui::EndTable();
+        }
         ImGui::End();
     }
 }
